@@ -45,25 +45,26 @@ Jupyter Notebook / Google Colab<br><br>
 
 ## ⚙️ Features
 
-✅ Predict house prices instantly
-✅ Clean and responsive UI
-✅ Dynamic location dropdown
-✅ REST API integration
+✅ Predict house prices instantly<br><br>
+✅ Clean and responsive UI<br>
+✅ Dynamic location dropdown<br>
+✅ REST API integration<br>
 ✅ Lightweight and fast<br><br>
 
 
 ## 🔌 How It Works
 User enters:
-Location
-Square feet
-BHK
-Bathrooms
-Frontend sends data to Flask API
-Backend processes input using trained model
+Location<br>
+Square feet<br>
+BHK<br>
+Bathrooms<br>
+Frontend sends data to Flask API<br>
+Backend processes input using trained model<br>
 Predicted price is returned and displayed<br><br>
 
 ## 🧪 Sample Inputs for Demo
 You can use these while showcasing your project:
+<br>
 
 Location	         Sqft	   BHK	  Bath   Expected Output
 Whitefield	      1200	    2     	2    	Moderate price
@@ -88,20 +89,20 @@ Simply open app.html in your browser
 <br><br>
 
 ## 🌐 API Endpoint
-POST /predict_home_price
+POST /predict_home_price<br>
 Parameters:
-location
-total_sqft
-bhk
-bath
+location<br>
+total_sqft<br>
+bhk<br>
+bath<br>
 <br><br>
 
 ## 🎯 Future Improvements
-📊 Add advanced ML models (Random Forest, XGBoost)
-🌍 Deploy on cloud (AWS / Render / Vercel)
-📱 Make mobile responsive UI
-📈 Add price trend visualization
-🔐 User authentication system
+📊 Add advanced ML models (Random Forest, XGBoost)<br>
+🌍 Deploy on cloud (AWS / Render / Vercel)<br>
+📱 Make mobile responsive UI<br>
+📈 Add price trend visualization<br>
+🔐 User authentication system<br>
 <br><br>
 
 ## 📸 Screenshot of the project
@@ -109,8 +110,8 @@ bath
 <br><br>
 
 ## 🙌 Acknowledgements
-Dataset inspiration from real estate listings
-Flask documentation
+Dataset inspiration from real estate listings<br>
+Flask documentation<br>
 <br><br>
 
 ## 📌 Conclusion
