@@ -57,7 +57,7 @@ House-Price-Prediction/
 │   └── house_price_model.pickle
 │
 ├── data/                  # Dataset
-│   └── dataset.csv
+│   └──Bengaluru_House_data.csv
 │
 └── README.md
 
