@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>🏠 House Price Predictor</h1>
+
+        <label>Location</label>
+        <select id="location"></select>
+
+        <label>Area (Square Feet)</label>
+        <input type="number" id="sqft" placeholder="Enter sqft">
+
+        <label>BHK</label>
+        <input type="number" id="bhk" placeholder="Bedrooms">
+
+        <label>Bathrooms</label>
+        <input type="number" id="bath" placeholder="Bathrooms">
+
+        <button onclick="predictPrice()">Predict Price</button>
+
+        <div id="result">Estimated Price: ₹ --</div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
