@@ -40,24 +40,7 @@ Jupyter Notebook / Google Colab<br><br>
 
 
 ## 📂 Project Structure
-House-Price-Prediction/
-│
-├── client/                # Frontend files
-│   ├── app.html
-│   ├── app.css
-│   └── app.js
-│
-├── server/                # Backend files
-│   ├── server.py
-│   └── util.py
-│
-├── model/                 # Trained model
-│   └── house_price_model.pickle
-│
-├── data/                  # Dataset
-│   └── Bengaluru_House_Data.csv
-│
-└── README.md
+![Structure](image.png)
 <br><br>
 
 ## ⚙️ Features
@@ -93,12 +76,14 @@ Hebbal	         1800	    3	      3	   Premium
 ## ▶️ Running the Project
 1. Clone the Repository:
 git clone https://github.com/your-username/house-price-prediction.git
+
 cd house-price-prediction
-2. Install Dependencies:
+
+3. Install Dependencies:
 pip install flask numpy
-3. Run the Server:
+4. Run the Server:
 python server/server.py
-4. Open Frontend:
+5. Open Frontend:
 Simply open app.html in your browser
 <br><br>
 
