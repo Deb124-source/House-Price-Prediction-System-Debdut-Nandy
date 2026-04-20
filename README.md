@@ -62,18 +62,6 @@ Frontend sends data to Flask API<br>
 Backend processes input using trained model<br>
 Predicted price is returned and displayed<br><br>
 
-## 🧪 Sample Inputs for Demo
-You can use these while showcasing your project:
-<br>
-
-Location	         Sqft	   BHK	  Bath   Expected Output<br>
-Whitefield	      1200	    2     	2    	Moderate price<br>
-Indiranagar	      2000   	 3	      3	   High price<br>
-Electronic City 	900	    2	      1	   Lower price<br>
-Yelahanka         1500	    3	      2   	Mid-high<br>
-Hebbal	         1800	    3	      3	   Premium<br>
-<br><br>
-
 ## ▶️ Running the Project
 1. Clone the Repository:
 git clone https://github.com/your-username/house-price-prediction.git
