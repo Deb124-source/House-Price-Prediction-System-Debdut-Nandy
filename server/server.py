@@ -1,8 +1,5 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
-CORS(app)
 import util
-util.load_saved_artifacts()
 
 app = Flask(__name__)
 
@@ -17,7 +14,7 @@ def get_location_names():
 
 @app.route('/predict_home_price', methods=['POST'])
 def predict_home_price():
-    total_sqft = request.form['total_sqft']
+    total_sqft = float(request.form['total_sqft'])
     location = request.form['location']
     bhk = int(request.form['bhk'])
     bath = int(request.form['bath'])   # FIXED space issue
