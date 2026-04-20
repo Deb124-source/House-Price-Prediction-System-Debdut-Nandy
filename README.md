@@ -45,7 +45,7 @@ Jupyter Notebook / Google Colab<br><br>
 
 ## ⚙️ Features
 
-✅ Predict house prices instantly<br><br>
+✅ Predict house prices instantly<br>
 ✅ Clean and responsive UI<br>
 ✅ Dynamic location dropdown<br>
 ✅ REST API integration<br>
@@ -66,12 +66,12 @@ Predicted price is returned and displayed<br><br>
 You can use these while showcasing your project:
 <br>
 
-Location	         Sqft	   BHK	  Bath   Expected Output
-Whitefield	      1200	    2     	2    	Moderate price
-Indiranagar	      2000   	 3	      3	   High price
-Electronic City 	900	    2	      1	   Lower price
-Yelahanka         1500	    3	      2   	Mid-high
-Hebbal	         1800	    3	      3	   Premium
+Location	         Sqft	   BHK	  Bath   Expected Output<br>
+Whitefield	      1200	    2     	2    	Moderate price<br>
+Indiranagar	      2000   	 3	      3	   High price<br>
+Electronic City 	900	    2	      1	   Lower price<br>
+Yelahanka         1500	    3	      2   	Mid-high<br>
+Hebbal	         1800	    3	      3	   Premium<br>
 <br><br>
 
 ## ▶️ Running the Project
