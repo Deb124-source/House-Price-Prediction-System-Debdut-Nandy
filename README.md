@@ -1,6 +1,7 @@
 # 🏠 House Price Prediction Web App
 
-A full-stack Machine Learning web application that predicts house prices based on user inputs like location, square footage, BHK, and number of bathrooms. Built with a powerful combination of Python (Flask) for backend and a clean HTML/CSS/JavaScript frontend.
+A full-stack Machine Learning web application that predicts house prices based on user inputs like location, square footage, BHK, and number of bathrooms. Built with a powerful combination of Python (Flask) for backend and a clean HTML/CSS/JavaScript frontend.<br><br>
+
 
 ## 🚀 Project Overview
 
@@ -115,7 +116,7 @@ bath
 
 ## 📸 Screenshots (Optional)
 
-![App UI](images/ui.png)
+![App UI](demo_prediction.png)
 
 
 ## 🙌 Acknowledgements
