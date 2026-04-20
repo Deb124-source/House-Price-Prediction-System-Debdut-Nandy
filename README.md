@@ -27,17 +27,15 @@ Model Serialization: pickle<br><br>
 
 
 ## 🛠️ Tech Stack
-Backend
-Python
-Flask
-NumPy
-Pickle
-Frontend
-HTML
-CSS
-JavaScript
-Tools
-VS Code
+Python<br>
+Flask<br>
+NumPy<br>
+Scikit-Learn<br>
+Pickle<br>
+HTML<br>
+CSS<br>
+JavaScript<br>
+VS Code<br>
 Jupyter Notebook / Google Colab<br><br>
 
 
@@ -57,10 +55,10 @@ House-Price-Prediction/
 │   └── house_price_model.pickle
 │
 ├── data/                  # Dataset
-│   └──Bengaluru_House_data.csv
+│   └── Bengaluru_House_Data.csv
 │
 └── README.md
-
+<br><br>
 
 ## ⚙️ Features
 
