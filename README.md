@@ -40,7 +40,7 @@ Jupyter Notebook / Google Colab<br><br>
 
 
 ## 📂 Project Structure
-![Structure](image.png)
+![Structure](images/image.png)
 <br><br>
 
 ## ⚙️ Features
@@ -94,7 +94,7 @@ bath<br>
 <br><br>
 
 ## 📸 Screenshot of the project
-![App UI](demo_prediction.png)
+![App UI](images/demo_prediction.png)
 <br><br>
 
 ## 🙌 Acknowledgements
