@@ -11,18 +11,23 @@ import numpy as np
 @st.cache_resource
 def load_artifacts():
 
-    model_path = "model/bengaluru_house_prices_model.pickle"
+    with open(
+        "model/bengaluru_house_prices_model.pickle",
+        "rb"
+    ) as file:
 
-    with open(model_path, "rb") as file:
         model = pickle.load(file)
 
 
-    with open("model/columns.json", "r") as file:
+    with open(
+        "model/columns.json",
+        "r"
+    ) as file:
+
         columns = json.load(file)["data_columns"]
 
 
     return model, columns
-
 
 
 model, columns = load_artifacts()
