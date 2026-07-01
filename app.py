@@ -1,205 +1,109 @@
 import streamlit as st
-import pickle
-import json
+import pandas as pd
 import numpy as np
+import joblib
+import json
 
 
-# -------------------------
-# Page Configuration
-# -------------------------
+# -----------------------------
+# Page Config
+# -----------------------------
 
 st.set_page_config(
-    page_title="Bangalore House Price Prediction",
+    page_title="HousePrice AI",
     page_icon="🏠",
     layout="centered"
 )
 
 
-# -------------------------
-# Load Model + Columns
-# -------------------------
+# -----------------------------
+# Load Assets
+# -----------------------------
 
-@st.cache_resource
-def load_artifacts():
+model = joblib.load("house_price_model.pkl")
 
-    with open(
-        "model/bengaluru_house_prices_model.pickle",
-        "rb"
-    ) as file:
-        model = pickle.load(file)
+with open("columns.json", "r") as f:
+    data_columns = json.load(f)["data_columns"]
 
 
-    with open(
-        "model/columns.json",
-        "r"
-    ) as file:
-        columns = json.load(file)["data_columns"]
+locations = sorted(data_columns[3:])
 
 
-    return model, columns
-
-
-
-try:
-
-    model, columns = load_artifacts()
-
-except Exception as e:
-
-    st.error("Model loading failed")
-    st.write(e)
-    st.stop()
-
-
-
-# -------------------------
+# -----------------------------
 # Prediction Function
-# -------------------------
+# -----------------------------
 
 def predict_price(location, sqft, bath, bhk):
 
+    x = np.zeros(len(data_columns))
 
-    input_data = np.zeros(len(columns))
+    x[0] = sqft
+    x[1] = bath
+    x[2] = bhk
 
+    if location.lower() in data_columns:
+        loc_index = data_columns.index(location.lower())
+        x[loc_index] = 1
 
-    # Find exact column positions
+    prediction = model.predict([x])[0]
 
-    if "total_sqft" in columns:
-        sqft_index = columns.index("total_sqft")
-        input_data[sqft_index] = sqft
-
-
-    if "bath" in columns:
-        bath_index = columns.index("bath")
-        input_data[bath_index] = bath
-
-
-    if "bhk" in columns:
-        bhk_index = columns.index("bhk")
-        input_data[bhk_index] = bhk
+    return round(prediction, 2)
 
 
+# -----------------------------
+# UI
+# -----------------------------
 
-    # Location encoding
-
-    if location in columns:
-
-        location_index = columns.index(location)
-
-        input_data[location_index] = 1
-
-
-
-    prediction = model.predict(
-        [input_data]
-    )[0]
-
-
-    return round(prediction,2)
-
-
-
-
-# -------------------------
-# UI Design
-# -------------------------
-
-st.title(
-    "🏠 Bangalore House Price Prediction"
-)
-
+st.title("🏠 HousePrice AI")
+st.subheader("AI Powered House Price Prediction")
 
 st.write(
-    """
-    Predict Bangalore house prices using a Machine Learning model.
-    
-    Enter house details below:
-    """
+    "Enter property details below to estimate the house price."
 )
 
-
-
-st.divider()
-
-
-
-# Location
-
-locations = columns[3:]
-
-
 location = st.selectbox(
-    "Select Location",
+    "📍 Location",
     locations
 )
 
+col1, col2 = st.columns(2)
+
+with col1:
+    sqft = st.number_input(
+        "📐 Total Sqft",
+        min_value=100,
+        value=1200
+    )
+
+with col2:
+    bath = st.number_input(
+        "🛁 Bathrooms",
+        min_value=1,
+        value=2
+    )
+
+col3, col4 = st.columns(2)
+
+with col3:
+    bhk = st.number_input(
+        "🏡 BHK",
+        min_value=1,
+        value=2
+    )
+
+with col4:
+    st.empty()
 
 
-# Square Feet
+if st.button("🔮 Predict Price"):
 
-sqft = st.number_input(
-    "Total Square Feet",
-    min_value=300,
-    max_value=10000,
-    value=1000
-)
-
-
-
-# BHK
-
-bhk = st.number_input(
-    "Number of Bedrooms (BHK)",
-    min_value=1,
-    max_value=10,
-    value=2
-)
-
-
-
-# Bathroom
-
-bath = st.number_input(
-    "Number of Bathrooms",
-    min_value=1,
-    max_value=10,
-    value=2
-)
-
-
-
-
-# Prediction Button
-
-if st.button(
-    "Predict Price",
-    use_container_width=True
-):
-
-
-    result = predict_price(
+    price = predict_price(
         location,
         sqft,
         bath,
         bhk
     )
 
-
     st.success(
-        f"Estimated Price: ₹ {result} Lakhs"
+        f"Estimated House Price: ₹ {price:.2f} Lakhs"
     )
-
-
-    st.info(
-        "Prediction is based on historical Bangalore housing data."
-    )
-
-
-
-
-st.divider()
-
-
-st.caption(
-    "Machine Learning Model | Scikit-Learn | Streamlit Deployment"
-)
