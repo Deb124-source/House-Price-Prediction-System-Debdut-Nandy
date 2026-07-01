@@ -1,106 +1,71 @@
-# 🏠 House Price Prediction Web App
+# 🏠 HousePrice AI
 
-A full-stack Machine Learning web application that predicts house prices based on user inputs like location, square footage, BHK, and number of bathrooms. Built with a powerful combination of Python (Flask) for backend and a clean HTML/CSS/JavaScript frontend.<br><br>
+An AI-powered House Price Prediction application built using Machine Learning and Streamlit.
 
+## Features
 
-## 🚀 Project Overview
-
-This project demonstrates how a machine learning model can be deployed as a real-world web application. Instead of just training a model in a notebook, this system allows users to interact with it through a simple and intuitive UI.<br><br>
-
-
-### Users can:
-1. Enter property details
-2. Select location
-3. Get instant price predictions<br><br>
-
-   
-## 🧠 Machine Learning Model
-Algorithm Used: Linear Regression
-Dataset: Real estate housing dataset<br><br>
+* Predict house prices instantly
+* Location-based estimation
+* Supports BHK, Bathrooms, and Total Sqft inputs
+* Clean and interactive Streamlit interface
+* Real-time predictions using Linear Regression
 
 
-### Preprocessing:
-Handling missing values
-One-hot encoding for locations
-Feature scaling (if applied)
-Model Serialization: pickle<br><br>
+## Live Demo:
+https://house-price-prediction-system-debdut-nandy.streamlit.app/
 
 
-## 🛠️ Tech Stack
-Python<br>
-Flask<br>
-NumPy<br>
-Scikit-Learn<br>
-Pickle<br>
-HTML<br>
-CSS<br>
-JavaScript<br>
-VS Code<br>
-Jupyter Notebook / Google Colab<br><br>
+## Tech Stack
 
+* Python
+* Scikit-Learn
+* Pandas
+* NumPy
+* Streamlit
 
-## 📂 Project Structure
-![Structure](images/image.png)
-<br><br>
+## Machine Learning Workflow
 
-## ⚙️ Features
+1. Data Cleaning
+2. Feature Engineering
+3. Outlier Removal
+4. One-Hot Encoding
+5. Linear Regression Model Training
+6. Model Deployment with Streamlit
 
-✅ Predict house prices instantly<br>
-✅ Clean and responsive UI<br>
-✅ Dynamic location dropdown<br>
-✅ REST API integration<br>
-✅ Lightweight and fast<br><br>
+## Project Structure
 
+HousePriceAI/
 
-## 🔌 How It Works
-User enters:
-Location<br>
-Square feet<br>
-BHK<br>
-Bathrooms<br>
-Frontend sends data to Flask API<br>
-Backend processes input using trained model<br>
-Predicted price is returned and displayed<br><br>
+├── app.py
 
-## ▶️ Running the Project
-1. Clone the Repository:
-git clone https://github.com/your-username/house-price-prediction.git
+├── house_price_model.pkl
 
-cd house-price-prediction
+├── columns.json
 
-3. Install Dependencies:
-pip install flask numpy
-4. Run the Server:
-python server/server.py
-5. Open Frontend:
-Simply open app.html in your browser
-<br><br>
+├── requirements.txt
 
-## 🌐 API Endpoint
-POST /predict_home_price<br>
-Parameters:
-location<br>
-total_sqft<br>
-bhk<br>
-bath<br>
-<br><br>
+└── README.md
 
-## 🎯 Future Improvements
-📊 Add advanced ML models (Random Forest, XGBoost)<br>
-🌍 Deploy on cloud (AWS / Render / Vercel)<br>
-📱 Make mobile responsive UI<br>
-📈 Add price trend visualization<br>
-🔐 User authentication system<br>
-<br><br>
+## Installation
 
-## 📸 Screenshot of the project
-![App UI](images/demo_prediction.png)
-<br><br>
+```bash
+pip install -r requirements.txt
+```
 
-## 🙌 Acknowledgements
-Dataset inspiration from real estate listings<br>
-Flask documentation<br>
-<br><br>
+## Run Locally
 
-## 📌 Conclusion
-This project bridges the gap between Machine Learning and Web Development, making models usable in real-world scenarios. It’s a strong portfolio project showcasing both data science and full-stack skills.
+```bash
+streamlit run app.py
+```
+
+## Screenshot
+
+<img src="Screenshot 2026-07-01 193954.png" width="700">
+
+## Deployment
+
+Deploy directly on Streamlit Community Cloud by connecting your GitHub repository and selecting `app.py` as the entry point.
+
+## Author
+
+Debdut Nandy
